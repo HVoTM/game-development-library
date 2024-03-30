@@ -1,11 +1,13 @@
 import pygame 
-
 pygame.init()
+
+# Setting FPS (frame rate) in Pygame to control the speed
+clock = pygame.time.Clock()
+dt = clock.tick(30)
 
 width, height = 1000, 600
 wn = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Pong")
-run = True
 
 #colours
 RED = (255, 0, 0)
@@ -13,10 +15,9 @@ BLUE = (0, 0, 255)
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
-
-#for the ball
+# Settings for the pong ball
 radius = 15
-ball_x, ball_y = width/2 - radius, height/2 - radius
+ball_x, ball_y = width/2 - radius, height/2 - radius # the ball will be set at the center
 vel_x, vel_y = 0.5, 0.5
 
 #for the paddles
@@ -28,8 +29,10 @@ paddle_vel = paddle_vel1= 0
 #for the gadgets
 gad = act = 0 
 g_left = G_left = 3
+
+run = True
 while run:
-    wn.fill(BLACK)
+    wn.fill(BLACK) # set background to black
 
     #for the inputs
     for i in pygame.event.get():
@@ -83,8 +86,7 @@ while run:
         if paddle_y1 <= ball_y <= paddle_y1 + paddle_height:
             ball_x = paddle_x + paddle_width
             vel_x *= -1  
-
-    #gadget movement controls 
+   
     if gad == 1:
         if paddle_X <= ball_x <= paddle_X + paddle_width:
             if paddle_y <= ball_y <= paddle_y + paddle_height:
