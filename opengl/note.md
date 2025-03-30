@@ -1,0 +1,1 @@
+- Cube() still has a problem when tried to call 10000 times. It only displays the first iteration, the Pygame just froze after that.

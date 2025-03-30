@@ -1,0 +1,8 @@
+{
+    "cmake.sourceDirectory": "C:/CODE/game-development-library/sfml_project/cmake-sfml-project",
+    "python.testing.pytestArgs": [
+        "algorithm"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
