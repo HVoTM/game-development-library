@@ -4,5 +4,9 @@
         "algorithm"
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestEnabled": true,
+    "files.associations": {
+        "*.dbclient-js": "javascript",
+        "optional": "cpp"
+    }
 }
